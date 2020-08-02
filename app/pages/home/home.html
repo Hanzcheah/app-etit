@@ -1,0 +1,54 @@
+<ion-view>
+<ion-content >
+
+<!-- <img class="logo" width="120" height="120" src="images/logo.png" /> -->
+<!-- <ion-item class="textt">
+Ordering for the first time? Please fill the information below to register.
+
+</ion-item>> -->
+<ion-fixed class="vercent">
+<form (ngSubmit)="click2()">
+
+    <ion-item padding class="empty">
+    <ion-label floating class="white">Phone Number <small>(for current phone)</small></ion-label>
+    <ion-input type="number" name="ph" [(ngModel)]="data.ph" maxlength= '12' required></ion-input>
+  </ion-item>
+
+
+  <ion-item padding class="empty">
+    <ion-label floating class="white">Name</ion-label>
+    <ion-input n type="text" name="username" [(ngModel)]="data.username"  maxlength= '15' required></ion-input>
+<!--           <small [hidden]="username.valid || (username.pristine && !f.submitted)" class="text-danger">
+        Username is required (minimum 5 characters).
+      </small> -->
+  </ion-item>
+
+<!--   <ion-item padding class="empty">
+    <ion-label floating class="white">Password <small>( 5-8 characters)</small></ion-label>
+    <ion-input type="password" name="username" [(ngModel)]="data.password" maxlength= '8' minlength='5' required></ion-input>
+  </ion-item>
+    <ion-item padding class="empty">
+    <ion-label floating class="white">Confirm Password <small>( 5-8 characters)</small></ion-label>
+    <ion-input type="password" name="password2" [(ngModel)]="data.password2" maxlength= '8' minlength='5'  required></ion-input>
+  </ion-item> -->
+
+    <ion-item padding class="empty">
+    <ion-label floating class="white">Email <small>(must be valid)</small></ion-label>
+    <ion-input type="email" name="email" [(ngModel)]="data.email" maxlength= '35' required></ion-input>
+  </ion-item>
+
+<br>
+
+
+
+       <button ion-button type="submit"   class="center">Proceed</button>
+     </form>
+     </ion-fixed>
+<!-- <br><br>
+{{text2}}
+     Already registered?
+       <button ion-button class="center">Login </button>
+<ion-list>
+</ion-list> -->
+</ion-content>
+</ion-view>

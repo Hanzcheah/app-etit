@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col width-80>
+          <ion-title text-center>
+<img class="logo2" width="80" height="26" src="images/appetit.png" />
+          </ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+
+
+   
+  <ion-list >
+    <button ion-item class="left" *ngFor="let item of items" (click)="click($event, item);" text-wrap>
+<!--       <ion-avatar item-left>
+        <img src="{{person.picture.thumbnail}}">
+      </ion-avatar> -->
+<!--       <ion-icon name="star" item-right>
+      </ion-icon> -->
+
+
+      	<h2 align="center">{{item.category}}</h2>
+<!--       <p>{{person.itemprice}}</p> -->
+
+    </button>
+  </ion-list>
+ <div class="spacing"></div> 
+<ion-fixed class="bottomfix" ><div class="bcolor" *ngIf="total" >{{numbercount}}</div></ion-fixed>
+<ion-fixed class="buttonfix" *ngIf="total" ><button ion-button round outline class="out" (click)="confirm($event)"> Orders<ion-icon name="arrow-dropright-circle"></ion-icon></button></ion-fixed>
+<ion-fixed class="btmfoot" ><ion-item class="btminside" *ngIf="total" >Total: ${{total}}</ion-item></ion-fixed>
+     
+</ion-content>
+
+

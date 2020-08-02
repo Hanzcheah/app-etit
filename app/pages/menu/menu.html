@@ -1,0 +1,75 @@
+<ion-header>
+
+   <ion-navbar>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col width-80>
+          <ion-title text-center>
+<img class="logo2" width="80" height="26" src="images/appetit.png" />
+          </ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+<ion-content class="home">
+
+
+   
+  <ion-list >
+<button ion-item class="left" *ngFor="let post of posts" (click)="click($event,post);" text-wrap>
+<div class="left1">
+        <div class="sizes1">{{post.itemname}}</div>
+        ${{post.itemprice}}
+</div>
+
+
+    </button>
+
+
+
+
+  </ion-list><!-- 
+<ion-list><ion-item *ngIf="total"><h1>Total: ${{total}}</h1></ion-item></ion-list> -->
+ 
+<!-- <div>
+  <ion-list>
+    <ion-item-sliding  *ngFor="let item of orders" >
+      <button ion-item >
+        <ion-item-content>
+          <h2>{{item.text}} x {{item.name}}</h2>          
+          ${{item.price}}
+        </ion-item-content>
+      </button>
+ 
+      <ion-item-options>
+        <button danger (click)="removeOrder(item)"><ion-icon name="trash"></ion-icon> Delete</button>
+      </ion-item-options>     
+    </ion-item-sliding>
+ 
+  </ion-list>
+
+  </div> -->
+
+<div class="spacing"></div>
+<!--  <button danger *ngIf="total" (click)="buy()">Order</button>
+  <button danger>Request for Assistance</button> -->
+<!-- <ion-footer>
+<ion-toolbar>
+
+</ion-toolbar>
+</ion-footer>    --> 
+
+<ion-fixed class="bottomfix" @anima="animaState" ><div class="bcolor" *ngIf="total" >{{numbercount}}</div></ion-fixed>
+<ion-fixed class="buttonfix" *ngIf="total" ><button ion-button round outline class="out" (click)="abababa()"> Orders<ion-icon name="arrow-dropright-circle"> </ion-icon></button></ion-fixed>
+<ion-fixed class="btmfoot" ><ion-item class="btminside" *ngIf="total" >Total: ${{total}}</ion-item></ion-fixed>
+
+<!-- <ion-footer>
+<ion-toolbar>
+<ion-item *ngIf="total" class= "animated bounceInDown"><h1>Total: ${{total}}</h1></ion-item>
+
+
+</ion-toolbar>
+</ion-footer> -->
+</ion-content>

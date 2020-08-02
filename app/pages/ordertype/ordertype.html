@@ -1,0 +1,59 @@
+<ion-header>
+
+  <ion-navbar  hideBackButton="true" >
+  <img class="logo" width="80" height="26" src="images/appetit.png" />
+
+<!--     <ion-title>Appetit</ion-title> -->
+  </ion-navbar>
+
+</ion-header>
+<ion-content >
+
+
+<ion-fixed class="center1">
+
+   <ion-row >
+   <ion-col width-50 col-offset-10>
+  <ion-card class="eat" (click)="click($event, 'Dinein');" tappable>
+   <img src="images/dinein.png" />
+  </ion-card>
+</ion-col>
+  <ion-col width-50 col-offset-10>
+
+<ion-card width-50 class="eat" (click)="click($event, 'Takeaway');" tappable>
+   <img src="images/takeaway.png" />
+
+
+</ion-card>
+</ion-col>
+</ion-row>
+</ion-fixed>
+
+
+<ion-fixed class="privacy">
+By using this app, you agree to our user and privacy policy agreement <a (click)="click2($event, 'afaf');">here.</a> 
+</ion-fixed>
+
+
+<!-- <ion-fixed class="ordernum"  *ngIf="posts?.length>0" >
+<button> View recent orders</button> -->
+<!-- </ion-fixed> -->
+
+
+<!-- <ion-item no-lines>
+Recent Orders Numbers:
+<div *ngFor="let post of posts" class="fulll">
+
+        <div class="floatss">{{post.fields.orderrefno}}</div>
+</div>
+
+
+    </ion-item> -->
+
+
+
+
+     
+</ion-content>
+
+

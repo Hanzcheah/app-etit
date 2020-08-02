@@ -1,0 +1,67 @@
+
+[nav-view-transition="ios"] {
+
+  [nav-view] {
+    box-shadow: none !important;
+  }
+
+  [nav-view="entering"],
+  [nav-view="leaving"] {
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+  }
+}
+
+ion-content{
+	height:100%;
+}
+.center1{
+text-align:center;
+top:36%;
+left:0;
+padding: 5%;
+margin:auto;
+}
+
+.logo{
+    margin-top:10px;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+.eat{
+padding:15px;
+	height:130px;
+	margin:auto;
+
+
+	}
+
+.ordernum{
+bottom:0%;
+left:0;
+padding-left: 10%;
+padding-top:0%;
+width:100%;
+}
+
+.fulll{
+  
+  width:100%;
+  border: 2px #000000;
+}
+
+.floatss{
+float:left;
+margin-top:10px;
+margin-left:0px;
+margin-right: 20px;
+margin-bottom:20px;
+padding-top:2px;
+border-radius: 10%;
+height:25px;
+width:40px;
+  color: #ffffff;
+background: #FF6D00;
+text-align:center;
+  }

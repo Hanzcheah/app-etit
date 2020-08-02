@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col width-80>
+          <ion-title text-center>
+<img class="logo2" width="80" height="26" src="images/appetit.png" />
+          </ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+
+<ion-item no-lines *ngIf="statusinfo">{{statusinfo}}</ion-item>
+
+   
+<form (ngSubmit)="click2()">
+
+<!--     <ion-item padding class="empty">
+    <ion-label floating class="white">Phone Number <small>(for current phone)</small></ion-label>
+    <ion-input type="number" name="ph" [(ngModel)]="data.ph" maxlength= '12' required></ion-input>
+  </ion-item> -->
+
+
+  <ion-item padding >
+    <ion-label floating>Card Number</ion-label>
+    <ion-input n type="text" data-stripe="number" [(ngModel)]="card.cardNumber" [ngModelOptions]="{standalone: true}" maxlength= '20' required></ion-input>
+<!--           <small [hidden]="username.valid || (username.pristine && !f.submitted)" class="text-danger">
+        Username is required (minimum 5 characters).
+      </small> -->
+  </ion-item>
+<!--     <ion-label>Expiration<small>( 5-8 characters)</small></ion-label> -->
+  <ion-grid no-padding>
+  <ion-row no-padding>
+  <ion-col width-50>
+  <ion-item padding >
+
+
+    <ion-label floating >Expiry&nbsp;<small>(MM)</small></ion-label>
+    <ion-input type="text" data-stripe="exp_month"  [(ngModel)]="card.expiryMonth"  [ngModelOptions]="{standalone: true}" maxlength= '2' minlength='1' required></ion-input>
+      </ion-item>
+      </ion-col>
+      <ion-col width-50>
+     <ion-item padding > 
+      <ion-label floating ><small>(YY)&nbsp;</small></ion-label>
+    <ion-input type="text" data-stripe="exp_year" [(ngModel)]="card.expiryYear"  [ngModelOptions]="{standalone: true}" maxlength= '2' minlength='1' required></ion-input>
+  </ion-item>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+    <ion-item padding >
+    <ion-label floating>CVC </ion-label>
+    <ion-input type="password" data-stripe="cvc" [(ngModel)]="card.cvc" [ngModelOptions]="{standalone: true}" maxlength= '4' minlength='3'  required></ion-input>
+  </ion-item>
+
+<!--     <ion-item padding class="empty">
+    <ion-label floating class="white">Email <small>(must be valid)</small></ion-label>
+    <ion-input type="email" name="email" [(ngModel)]="data.email" maxlength= '35' required></ion-input>
+  </ion-item> -->
+
+<br>
+<ion-item padding no-lines>Amount: ${{total}}</ion-item>
+
+
+
+
+       <button ion-button type="submit" class="center">Proceed</button>
+     </form>
+
+     {{success2}}
+
+<!--  <div class="spacing"></div>  -->
+<!-- <ion-fixed class="bottomfix" ><div class="bcolor" *ngIf="total" >{{numbercount}}</div></ion-fixed>
+<ion-fixed class="buttonfix" *ngIf="total" ><button ion-button round outline class="out" (click)="confirm($event)"> ORDERS&nbsp;<ion-icon name="arrow-dropright-circle"> </ion-icon></button></ion-fixed>
+<ion-fixed class="btmfoot" ><ion-item class="btminside" *ngIf="total" >Total: ${{total}}</ion-item></ion-fixed> -->
+     
+</ion-content>
+
+

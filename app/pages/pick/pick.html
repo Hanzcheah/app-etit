@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col width-80>
+          <ion-title text-center>
+<img class="logo2" width="80" height="26" src="images/appetit.png" />
+          </ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+<ion-content class="card-background-page">
+
+  <ion-item  no-lines class="noborder" *ngIf="posts?.length==0">
+        <ion-grid>
+        <ion-row>
+     <ion-col class="taligncenter">
+          <h1>Sorry!</h1>
+          </ion-col>
+
+          </ion-row>
+ <ion-row>
+     <ion-col class="taligncenter"><div>
+There are no restaurants  </div>
+          </ion-col>
+
+          </ion-row>
+           <ion-row>
+     <ion-col class="taligncenter"><div>
+available around you.
+
+
+
+
+</div>
+          </ion-col>
+
+          </ion-row>
+
+
+ </ion-grid>
+      </ion-item>
+  <ion-card *ngFor="let post of posts" (click)="click($event,post);" tappable>
+
+
+    <img src='{{post.image}}' />
+        <div class="card-title">{{post.name}}</div>
+<div class="carddescription">{{post.resdescription}}</div>
+    <div class="btm">
+
+</div>
+
+  </ion-card>
+
+<!--         <button full (click)="click();"> my order history    </button> -->
+<!--  {{location1}}
+ {{location2}} -->
+ 
+        <!-- <ion-item>
+    <ion-avatar item-left>  
+      <img src="img/marty-avatar.png">
+    </ion-avatar>
+    <h2>Marty McFly</h2>
+    <p>November 5, 1955</p>
+  </ion-item> -->
+
+</ion-content>
+
+

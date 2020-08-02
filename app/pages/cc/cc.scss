@@ -1,0 +1,68 @@
+[nav-view-transition="ios"] {
+
+  [nav-view] {
+    box-shadow: none !important;
+  }
+
+  [nav-view="entering"],
+  [nav-view="leaving"] {
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+  }
+}
+
+
+
+.restaurant {
+
+}
+
+.alignright{
+	text-align:center;
+}
+
+.left{
+padding-left:0px
+}
+.logo2{
+
+margin-top:4%;
+}
+
+.spacing{
+	height:60px;
+}
+
+.btmfoot
+{
+    text-align:right;
+    padding:5px;
+
+      color: #ffffff;
+	bottom:0px;
+	width:100%;
+	height:60px;
+	background: #FF6D00;
+	z-index:1;
+	    box-shadow: 00px -1px 5px  #ebebeb;
+}
+
+
+.center{
+  background:#FF6D00;
+  color:#ffffff;
+  width:80%;
+  margin-top:10%;
+
+}
+
+
+.btminside{
+    margin-top:-25px;
+    text-align:right;
+    font-size: 1.4em;
+     color: #ffffff;
+     	height:100px;
+     background: rgba(0,0,0,0);
+     z-index:2;
+}

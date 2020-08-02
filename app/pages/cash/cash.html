@@ -1,0 +1,61 @@
+<ion-header>
+
+     <ion-navbar  hideBackButton="true" >
+  <img class="logo" width="80" height="26" src="images/appetit.png" />
+
+<!--     <ion-title>Appetit</ion-title> -->
+  </ion-navbar>
+</ion-header>
+<ion-content >
+
+
+
+
+ <ion-item no-lines class="noborder">
+        <ion-grid>
+        <ion-row>
+     <ion-col class="taligncenter">
+          <h1>Thank You!</h1>
+          </ion-col>
+
+          </ion-row>
+ <ion-row>
+     <ion-col class="taligncenter" *ngIf="cc"><div>
+Please proceed to the counter </div>
+          </ion-col>
+
+          </ion-row>
+           <ion-row>
+     <ion-col class="taligncenter"  *ngIf="cc"><div>
+to pay cash for your order.
+
+
+
+
+</div>
+          </ion-col>
+
+          </ion-row>
+           <ion-row>
+     <ion-col class="taligncenter"><div>
+
+
+Your order number:
+
+
+{{orderrefno}}</div>
+          </ion-col>
+
+          </ion-row>
+
+
+ </ion-grid>
+      </ion-item>
+     
+
+<div class ="cent">
+<button ion-button (click)="buy()"> Back to Home</button>
+</div>
+</ion-content>
+
+

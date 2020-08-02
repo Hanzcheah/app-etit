@@ -1,0 +1,103 @@
+<ion-header>
+
+   <ion-navbar>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col width-80>
+          <ion-title text-center>
+<img class="logo2" width="80" height="26" src="images/appetit.png" />
+          </ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+<ion-content >
+<div class="topmore">    
+<ion-item *ngIf="statusinfo" > <ion-label floating> *Enter Table Number</ion-label> <ion-input type="text"  [(ngModel)]="tabnum" [ngModelOptions]="{standalone: true}" ></ion-input></ion-item>
+
+<ion-item >  <ion-label floating> Insert any addtional comments here</ion-label><ion-textarea  [(ngModel)]="add" [ngModelOptions]="{standalone: true}" ></ion-textarea></ion-item>
+
+</div>
+   <div class="haa">Your Order <button ion-button round outline class="center2"  *ngIf="total>0" (click)="buy()"> Submit </button></div>
+
+   
+<!-- <ion-list>
+    <ion-item class="nopadding">
+        <ion-grid class="ttt">
+
+          <ion-row>         <ion-col width-75>
+       <h1>Total:</h1>
+         </ion-col>
+                   <ion-col width-25 class="right1">
+          <h1>${{total}}</h1>
+          </ion-col></ion-row>
+
+
+ </ion-grid>
+      </ion-item>
+      </ion-list> -->
+
+
+    <ion-item no-lines class="itemheading">Order Items:</ion-item>
+<ion-list>
+
+    <ion-item *ngFor="let item of orders" class="nopadding" text-wrap>
+        <ion-grid class="ttt">
+        <ion-row>
+     <ion-col >
+          
+{{item.text}} x {{item.name}}
+          </ion-col>
+
+          </ion-row>
+
+          <ion-row>         <ion-col width-75>
+         <button ion-button round outline class="lesspadding" (click)="removeOrder(item)">Remove</button></ion-col>
+
+                   <ion-col width-25 class="right1">
+          ${{item.price}}
+          </ion-col></ion-row>
+
+
+ </ion-grid>
+      </ion-item>
+<!--         <button danger (click)="removeOrder(item)"><ion-icon name="trash"></ion-icon> Delete</button>
+      </ion-item-options>
+    </ion-item-sliding> -->
+ 
+  </ion-list>
+
+ 
+    <ion-item class="nopadding">
+        <ion-grid class="ttt">
+
+          <ion-row>         <ion-col width-75>
+       <h1>Total:</h1>
+         </ion-col>
+                   <ion-col width-25 class="right1">
+          ${{total}}
+          </ion-col></ion-row>
+
+
+ </ion-grid>
+      </ion-item>
+<!--       <ion-item no-lines *ngIf="statusinfo">{{statusinfo}}YES</ion-item> -->
+<!--       <div class="area"> -->
+
+
+<!-- <ion-label>Comments</ion-label> -->
+
+
+
+<!--       </div> <button ion-button round outline class="center" (click)="buy()"> Submit </button>
+      <div class="space">
+      </div> -->
+<!--       <div class="spacing"></div> -->
+
+<!-- <ion-fixed class="buttonfix" *ngIf="total" [ngClass]="{'remove-tabs': keyboardCheck(), buttonfix:true}"><button ion-button round outline class="out" (click)="buy()"> Submit </button></ion-fixed>
+     <ion-fixed class="btmfoot" [ngClass]="{'remove-tabs': keyboardCheck(), btmfoot:true}"></ion-fixed> -->
+</ion-content>
+
+

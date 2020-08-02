@@ -1,0 +1,63 @@
+<ion-header>
+
+     <ion-navbar  hideBackButton="true" >
+  <img class="logo" width="80" height="26" src="images/appetit.png" />
+
+<!--     <ion-title>Appetit</ion-title> -->
+  </ion-navbar>
+</ion-header>
+<ion-content >
+
+
+
+
+ <ion-item no-lines class="noborder">
+        <ion-grid>
+        <ion-row>
+     <ion-col class="taligncenter">
+          <h1>Unable to get your location</h1>
+          </ion-col>
+
+          </ion-row>
+ <ion-row>
+     <ion-col class="taligncenter"><div>
+ </div>
+          </ion-col>
+
+          </ion-row>
+           <ion-row>
+     <ion-col class="taligncenter">Please enter your current location below<div>
+
+
+
+
+
+</div>
+          </ion-col>
+
+          </ion-row>
+           <ion-row>
+     <ion-col class="taligncenter"><div>
+
+</div>
+          </ion-col>
+
+          </ion-row>
+
+
+ </ion-grid>
+      </ion-item>
+      <div class="btmmarg">
+      <ion-item>
+     <ion-label floating> Which street/suburb are you at?</ion-label> 
+    <ion-input type="text" [(ngModel)]="location" [ngModelOptions]="{standalone: true}"  required></ion-input>
+    </ion-item>
+</div>
+<div class ="cent">
+
+<button ion-button (click)="buy()"> Submit</button>
+
+</div>
+</ion-content>
+
+
